@@ -1,0 +1,25 @@
+﻿<form novalidate name="newPetForm" ng-submit="vm.addPet()">
+	<div class="form-group">
+		<label for="name">Pet Name</label>
+		<input class="form-control" type="text" id="name" name="name" ng-model="vm.newPet.name" required ng-minlength="5" />
+		<span ng-show="newPetForm.name.$error.required" class="text-warning">Name is required</span>
+		<span ng-show="newPetForm.name.$error.minlength" class="text-warning">Name must be at lest 5 characters.</span>
+	</div>
+	<div class="form-group">
+		<label for="name">Sex</label>
+		<input class="form-control" type="text" id="sex" name="sex" ng-model="vm.newPet.sex" required ng-maxlength="1" />
+		<span ng-show="newPetForm.sex.$error.required" class="text-warning">Sex is required</span>
+		<span ng-show="newPetForm.sex.$error.maxlength" class="text-warning">Name must be at lest 1 characters.</span>
+	</div>
+	<div class="form-group">
+		<label for="name">Type</label>
+		<input class="form-control" type="text" id="type" name="type" ng-model="vm.newPet.type" required ng-maxlength="1" />
+		<span ng-show="newPetForm.type.$error.required" class="text-warning">Sex is required</span>
+		<span ng-show="newPetForm.type.$error.maxlength" class="text-warning">Name must be at lest 1 characters.</span>
+	</div>
+	<div class="form-group">
+		<input type="submit" value="Add"
+			   class="btn btn-success"
+			   ng-disabled="newPetForm.$invalid" />
+	</div>
+</form>

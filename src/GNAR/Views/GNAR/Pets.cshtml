@@ -1,0 +1,14 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+@section scripts {
+	<script src="~/lib/angular/angular.min.js"></script>
+	<script src="~/lib/angular-route/angular-route.min.js"></script>
+	<script src="~/js/simpleControls.js"></script>
+	<script src="~/js/app-pets.js"></script>
+	<script src="~/js/petsController.js"></script>
+}
+
+<div class="row" ng-app="app-pets">
+	<div ng-view></div>
+</div>
